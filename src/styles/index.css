@@ -1,3 +1,22 @@
-element {
-  --main-text-color: #FF6060;
+/* colors variables--------------------------------------------------------------------------*/
+:root {
+    --color-primary: #FF6060;
+    --color-secondary: #FFFFFF;
+}
+
+/* base ---------------------------------------------------------------------------*/
+* {
+    box-sizing: border-box !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
 }
