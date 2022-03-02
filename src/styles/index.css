@@ -2,8 +2,6 @@
 :root {
     --color-primary: #FF6060;
     --color-secondary: #FFFFFF;
-
-    --font-primary : Montserrat;
 }
 
 /* base ---------------------------------------------------------------------------*/
@@ -20,5 +18,5 @@ body {
     max-width: 1500px;
     margin: auto;
     padding: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: Montserrat, "DM Sans", sans-serif;
 }
