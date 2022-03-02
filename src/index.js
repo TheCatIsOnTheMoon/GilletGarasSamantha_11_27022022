@@ -1,12 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './pages/App'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Home from './pages/Home'
+import About from './pages/About'
+
+import Header from './components/Header'
+import Error from './components/Error'
+
+import './styles/reset.css'
+import './styles/index.css'
+
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
+        {/* use '*' for path to match any */}
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 )
