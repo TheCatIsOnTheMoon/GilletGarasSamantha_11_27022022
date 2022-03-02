@@ -11,7 +11,7 @@ const CardBox = styled.span`
   padding-bottom: 20px;
 `
 const CardCaption = styled.span`
-  font-family: Montserrat;
+  font-family: var(--font-primary);
   font-weight: 500;
   font-size: 18px;
   line-height: 23px;
