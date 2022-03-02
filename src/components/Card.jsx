@@ -4,11 +4,20 @@ import styled from 'styled-components'
 const CardList = styled.span`
   display: flex;
   flexdirection: column;
+  padding-bottom: 20px;
 `
 const CardBox = styled.span`
   margin: auto;
   position: relative;
-  padding-bottom: 20px;
+  height: 255px;
+  width: 335px;
+  border-radius: 10%;
+
+  transition: 200ms;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 10px #e2e3e9;
+  }
 `
 const CardCaption = styled.span`
   font-weight: 500;
