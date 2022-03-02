@@ -7,6 +7,8 @@ const Logo = styled.img`
   height: 47px;
   width: 145px;
   margin: 20px;
+
+  color: var(--color-primary);
 `
 
 const StyledLink = styled(Link)`

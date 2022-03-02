@@ -3,7 +3,7 @@ import Banner from '../components/Banner'
 
 function Home() {
   return (
-    <div className="App">
+    <div>
       <Banner />
       <HousingCards />
     </div>
