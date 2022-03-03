@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bannerphoto from '../assets/gustavo-alves-YOXSC4zRcxw-unsplash 1.png'
+import bannerphoto from '../assets/banner_about.png'
 
 const BannerImg = styled.img`
   height: 223px;
