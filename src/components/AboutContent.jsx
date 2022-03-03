@@ -19,6 +19,7 @@ const Summary = styled.summary`
 `
 const DetailsText = styled.div`
   padding: 30px 18px 20px 18px;
+  line-height: 142.6%;
 `
 const Arrow = styled.img``
 

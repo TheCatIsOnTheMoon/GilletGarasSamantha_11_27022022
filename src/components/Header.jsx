@@ -12,12 +12,17 @@ const Logo = styled.img`
 `
 
 const StyledLink = styled(Link)`
-  text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 17px;
-  padding-left: 10px;
+  padding-left: 57px;
 
   color: var(--color-primary);
+
+  @media (max-width: 800px) {
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding-left: 10px;
+  }
 `
 
 const NavBar = styled.span`

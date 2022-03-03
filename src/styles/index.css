@@ -15,8 +15,11 @@ html {
 
 body {
     position: relative;
-    max-width: 1500px;
-    margin: auto;
     padding: 0;
     font-family: Montserrat, "DM Sans", sans-serif;
+}
+
+main, header {
+    max-width: 1400px;
+    margin: auto;
 }

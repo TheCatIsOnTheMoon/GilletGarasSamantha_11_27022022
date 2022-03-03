@@ -13,10 +13,27 @@ const HouseBox = styled.div`
 const HouseImgBox = styled.div``
 
 const HouseImg = styled.img`
-  height: 255px;
+  height: 415px;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+  @media (max-width: 800px) {
+    height: 255px;
+  }
+`
+
+const HousePresentation = styled.div`
+  display: flex;
+  gap: 20px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
+
+const HouseTitleAndTags = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `
 
 const HouseTitle = styled.div`
@@ -34,8 +51,8 @@ const HouseTags = styled.div`
 `
 
 const Tag = styled.span`
-  height: 1.2rem;
-  font-size: 0.625rem;
+  height: 1.3rem;
+  font-size: 0.7rem;
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-radius: 5px;
@@ -45,7 +62,15 @@ const Tag = styled.span`
 `
 const RatingAndHostBox = styled.div`
   display: flex;
-  align-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+
+  @media (max-width: 800px) {
+    flex-direction: row;
+    align-content: space-between;
+  }
 `
 const HouseRating = styled.div`
   display: flex;
@@ -77,12 +102,25 @@ const HostPicture = styled.img`
   margin-left: 1rem;
 `
 
-const DecriptionAndEquipmentBox = styled.div``
+const DecriptionAndEquipmentBox = styled.div`
+  display: flex;
+  gap: 7%;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+`
 
 const DetailsBox = styled.details`
+  display: flex;
+
+  width: 50%;
   color: var(--color-primary);
   background-color: #f6f6f6;
   margin: 20px 0;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `
 
 const Summary = styled.summary`
@@ -125,28 +163,33 @@ function HousePage({
       <HouseImgBox>
         <HouseImg src={pictures[0]} alt="house" />
       </HouseImgBox>
-      <HouseTitle>{title}</HouseTitle>
-      <HouseLocation>{location}</HouseLocation>
-      <HouseTags>
-        {tags.map((tag, index) => (
-          <Tag key={index}>{tag}</Tag>
-        ))}
-      </HouseTags>
-      <RatingAndHostBox>
-        {/* https://thewebdev.info/2021/05/28/how-to-repeat-an-element-n-times-with-react/ */}
-        <HouseRating>
-          {[...Array(starsTrue)].map((e, i) => (
-            <StarImg key={i} src={starTrue} alt="star true" />
-          ))}
-          {[...Array(starsFalse)].map((e, i) => (
-            <StarImg key={i} src={starFalse} alt="star false" />
-          ))}
-        </HouseRating>
-        <HouseHost>
-          <HostName>{hostName}</HostName>
-          <HostPicture src={hostPicture} alt="host" />
-        </HouseHost>
-      </RatingAndHostBox>
+      <HousePresentation>
+        <HouseTitleAndTags>
+          <HouseTitle>{title}</HouseTitle>
+          <HouseLocation>{location}</HouseLocation>
+          <HouseTags>
+            {tags.map((tag, index) => (
+              <Tag key={index}>{tag}</Tag>
+            ))}
+          </HouseTags>
+        </HouseTitleAndTags>
+
+        <RatingAndHostBox>
+          {/* https://thewebdev.info/2021/05/28/how-to-repeat-an-element-n-times-with-react/ */}
+          <HouseRating>
+            {[...Array(starsTrue)].map((e, i) => (
+              <StarImg key={i} src={starTrue} alt="star true" />
+            ))}
+            {[...Array(starsFalse)].map((e, i) => (
+              <StarImg key={i} src={starFalse} alt="star false" />
+            ))}
+          </HouseRating>
+          <HouseHost>
+            <HostName>{hostName}</HostName>
+            <HostPicture src={hostPicture} alt="host" />
+          </HouseHost>
+        </RatingAndHostBox>
+      </HousePresentation>
       <DecriptionAndEquipmentBox>
         <DetailsBox>
           <Summary

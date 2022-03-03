@@ -2,49 +2,60 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const CardList = styled.span`
-  display: flex;
-  flexdirection: column;
-  padding-bottom: 20px;
-`
-const CardBox = styled(Link)`
-  margin: auto;
+const CardBox = styled.div`
   position: relative;
-  height: 255px;
-  width: 335px;
-  border-radius: 10%;
-
+  margin: auto;
+`
+const CardLink = styled(Link)`
   transition: 200ms;
   &:hover {
     cursor: pointer;
     box-shadow: 2px 2px 10px #e2e3e9;
   }
 `
-const CardCaption = styled.span`
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 23px;
 
+const CardImgBox = styled.div`
+  border-radius: 10%;
+  height: 340px;
+  width: 100%;
+
+  @media (max-width: 800px) {
+    height: 255px;
+    width: 100%;
+  }
+`
+const CardImage = styled.img`
+  height: 340px;
+  width: 100%;
+  border-radius: 10%;
+  object-fit: cover;
+  @media (max-width: 800px) {
+    height: 255px;
+    width: 100%;
+  }
+`
+
+const CardCaption = styled.span`
+  font-size: 1.2rem;
+  line-height: 140%;
   color: var(--color-secondary);
 
   position: absolute;
-  left: 5.88%;
-  top: 73.73%;
-`
-const CardImage = styled.img`
-  height: 255px;
-  width: 335px;
-  border-radius: 10%;
+  left: 6%;
+  right: 6%;
+  bottom: 6%;
 `
 
 function Card({ id, title, picture }) {
   return (
-    <CardList>
-      <CardBox to={`/housing/${id}`}>
-        <CardImage src={picture} alt="housing" />
+    <CardBox>
+      <CardLink to={`/housing/${id}`}>
+        <CardImgBox>
+          <CardImage src={picture} alt="housing" />
+        </CardImgBox>
         <CardCaption>{title}</CardCaption>
-      </CardBox>
-    </CardList>
+      </CardLink>
+    </CardBox>
   )
 }
 

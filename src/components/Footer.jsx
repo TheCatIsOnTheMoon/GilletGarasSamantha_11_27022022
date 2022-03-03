@@ -24,10 +24,12 @@ const FooterText = styled.span`
 
 function Footer() {
   return (
-    <FooterBox>
-      <Logo src={logo} alt="logo" />
-      <FooterText>© 2020 Kasa. All rights reserved</FooterText>
-    </FooterBox>
+    <footer>
+      <FooterBox>
+        <Logo src={logo} alt="logo" />
+        <FooterText>© 2020 Kasa. All rights reserved</FooterText>
+      </FooterBox>
+    </footer>
   )
 }
 
