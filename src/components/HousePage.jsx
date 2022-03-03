@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import arrow from '../assets/arrow.svg'
+import starTrue from '../assets/star_true.svg'
+import starFalse from '../assets/star_false.svg'
 
 const HouseBox = styled.div`
   display: flex;
@@ -46,7 +48,12 @@ const RatingAndHostBox = styled.div`
   align-content: space-between;
 `
 const HouseRating = styled.div`
+  display: flex;
   margin: auto 0;
+`
+
+const StarImg = styled.img`
+  height: 1.1rem;
 `
 
 const HouseHost = styled.div`
@@ -107,6 +114,8 @@ function HousePage({
   tags,
 }) {
   const [cls, setCls] = useState('rotate0')
+  const starsTrue = Number(rating)
+  const starsFalse = Number(5 - rating)
   return (
     <HouseBox>
       <style>{`
@@ -124,7 +133,15 @@ function HousePage({
         ))}
       </HouseTags>
       <RatingAndHostBox>
-        <HouseRating>{rating}</HouseRating>
+        {/* https://thewebdev.info/2021/05/28/how-to-repeat-an-element-n-times-with-react/ */}
+        <HouseRating>
+          {[...Array(starsTrue)].map((e, i) => (
+            <StarImg key={i} src={starTrue} alt="star true" />
+          ))}
+          {[...Array(starsFalse)].map((e, i) => (
+            <StarImg key={i} src={starFalse} alt="star false" />
+          ))}
+        </HouseRating>
         <HouseHost>
           <HostName>{hostName}</HostName>
           <HostPicture src={hostPicture} alt="host" />
