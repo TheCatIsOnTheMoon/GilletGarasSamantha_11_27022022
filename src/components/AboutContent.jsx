@@ -53,7 +53,7 @@ function AboutContent() {
         .rotate180 {transform: rotate(180deg);}
       `}</style>
       {aboutContent.map((e, index) => (
-        <DetailsBox>
+        <DetailsBox key={index}>
           <Summary
             onClick={() =>
               setCls((cls) => (cls === 'rotate180' ? 'rotate0' : 'rotate180'))
