@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
-function Housing({ id, title, picture }) {
+function Housing() {
   return (
     <div>
-      <img src={picture} alt="housing" />
-      <span>{title}</span>
+      <span>Housing</span>
     </div>
   )
 }

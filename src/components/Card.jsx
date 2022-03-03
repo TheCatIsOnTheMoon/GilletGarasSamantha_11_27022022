@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -6,7 +7,7 @@ const CardList = styled.span`
   flexdirection: column;
   padding-bottom: 20px;
 `
-const CardBox = styled.span`
+const CardBox = styled(Link)`
   margin: auto;
   position: relative;
   height: 255px;
@@ -36,10 +37,10 @@ const CardImage = styled.img`
   border-radius: 10%;
 `
 
-function Card({ title, picture }) {
+function Card({ id, title, picture }) {
   return (
     <CardList>
-      <CardBox>
+      <CardBox to={`/housing/${id}`}>
         <CardImage src={picture} alt="housing" />
         <CardCaption>{title}</CardCaption>
       </CardBox>
@@ -48,6 +49,7 @@ function Card({ title, picture }) {
 }
 
 Card.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   picture: PropTypes.string,
 }

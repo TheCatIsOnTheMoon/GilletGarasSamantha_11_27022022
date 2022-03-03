@@ -7,8 +7,9 @@ function HousingCards() {
       {data.map((housing, index) => (
         <Card
           key={housing.id}
+          id={housing.id}
           title={housing.title}
-          picture={housing.pictures[0]}
+          picture={housing.cover}
         />
       ))}
     </div>
