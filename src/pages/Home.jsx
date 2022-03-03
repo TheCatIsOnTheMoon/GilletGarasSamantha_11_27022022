@@ -1,10 +1,10 @@
 import HousingCards from '../components/HousingCards'
-import Banner from '../components/Banner'
+import BannerHome from '../components/BannerHome'
 
 function Home() {
   return (
     <div>
-      <Banner />
+      <BannerHome />
       <HousingCards />
     </div>
   )
