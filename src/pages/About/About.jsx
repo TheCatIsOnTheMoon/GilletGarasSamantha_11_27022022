@@ -1,17 +1,12 @@
-import styled from 'styled-components'
 import BannerAbout from '../../components/BannerAbout/BannerAbout'
 import AboutContent from '../../components/AboutContent/AboutContent'
 
-const AboutBox = styled.div`
-  margin: 1rem 1rem 5rem 1rem;
-`
-
 function About() {
   return (
-    <AboutBox>
+    <div>
       <BannerAbout />
       <AboutContent />
-    </AboutBox>
+    </div>
   )
 }
 

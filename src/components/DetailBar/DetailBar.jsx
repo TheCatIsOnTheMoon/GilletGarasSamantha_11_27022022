@@ -7,7 +7,7 @@ function DetailBar({ title, text }) {
       <details>
         <summary>
           {title}
-          <img src={arrow} alt="arrow" />
+          <img src={arrow} alt="arrow" className="detail_arrow_close" />
         </summary>
         <p>{text}</p>
       </details>

@@ -1,5 +1,4 @@
 .card {
-
   margin: auto;
 }
 
@@ -24,7 +23,7 @@ figure {
     width: 100%;
     border-radius: 10%;
     object-fit: cover;
-}
+}  
 
 figcaption {
     font-size: 1.2rem;

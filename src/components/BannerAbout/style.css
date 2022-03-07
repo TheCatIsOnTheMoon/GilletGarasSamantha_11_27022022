@@ -1,0 +1,17 @@
+.banner {
+    margin: 0 20px;
+  margin-bottom: 22px;
+}
+
+.banner_img {
+    height: 223px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+@media (max-width: 800px) {
+    .banner_img {
+        height: 111px;
+    }
+}

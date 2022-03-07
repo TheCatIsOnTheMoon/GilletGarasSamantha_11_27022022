@@ -1,4 +1,5 @@
 import DetailBar from '../DetailBar/DetailBar'
+import './style.css'
 
 const aboutContent = [
   {
@@ -21,7 +22,7 @@ const aboutContent = [
 
 function AboutContent() {
   return (
-    <div>
+    <div className="about_content">
       {aboutContent.map((e, index) => (
         <DetailBar key={`${e.title}-${index}`} title={e.title} text={e.text} />
       ))}
