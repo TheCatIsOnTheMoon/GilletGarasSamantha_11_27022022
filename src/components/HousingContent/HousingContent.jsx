@@ -1,8 +1,10 @@
 import './style.css'
 import DetailBar from '../DetailBar/DetailBar'
-import Caroussel from '../Caroussel/Caroussel'
+import Carousel from '../Carousel/Carousel'
 import starTrue from './star_true.svg'
 import starFalse from './star_false.svg'
+
+// https://thewebdev.info/2021/05/28/how-to-repeat-an-element-n-times-with-react/
 
 function HousePage({
   id,
@@ -18,14 +20,15 @@ function HousePage({
 }) {
   const starsTrue = Number(rating)
   const starsFalse = Number(5 - rating)
+
   return (
     <div className="house_box">
-      <Caroussel pictures={pictures} />
+      <Carousel pictures={pictures} />
 
       <div className="house_presentation">
         <div className="house_presentation_titleandtags">
-          <div className="house_title">{title}</div>
-          <div className="house_location">{location}</div>
+          <p className="house_title">{title}</p>
+          <p className="house_location">{location}</p>
           <ul className="house_tags">
             {tags.map((tag, index) => (
               <li key={index} className="house_tags_tag">
@@ -36,7 +39,6 @@ function HousePage({
         </div>
 
         <div className="house_presentation_ratingandhost">
-          {/* https://thewebdev.info/2021/05/28/how-to-repeat-an-element-n-times-with-react/ */}
           <div className="house_rating">
             {[...Array(starsTrue)].map((e, i) => (
               <img
@@ -62,6 +64,7 @@ function HousePage({
           </div>
         </div>
       </div>
+
       <div className="description">
         <DetailBar
           key={`"description"-${id}`}
