@@ -24,11 +24,13 @@
 
 .house_title {
   font-size: 1.2rem;
+  line-height: 140%;
   color: var(--color-primary);
 }
 
 .house_location {
   font-size: 1rem;
+  line-height: 140%;
   color: var(--color-primary);
 }
 
@@ -109,5 +111,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 0;
   }
 }
