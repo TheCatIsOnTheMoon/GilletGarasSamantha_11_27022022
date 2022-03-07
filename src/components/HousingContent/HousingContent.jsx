@@ -65,21 +65,26 @@ function HousePage({
         </div>
       </div>
 
-      <div className="description">
-        <DetailBar
-          key={`"description"-${id}`}
-          title="Description"
-          text={description}
-        />
-      </div>
-      <div className="equipments">
-        <DetailBar
-          key={`"equipments"-${id}`}
-          title="Equipments"
-          text={equipments.map((e, index) => (
-            <span key={`${e}-${index}`}>{e}</span>
-          ))}
-        />
+      <div className="house_presentation_descriptionandequipments">
+        <div className="description">
+          <DetailBar
+            key={`"description"-${id}`}
+            title="Description"
+            text={description}
+          />
+        </div>
+        <div className="equipments">
+          <DetailBar
+            key={`"equipments"-${id}`}
+            title="Equipments"
+            text={equipments.map((e, index) => (
+              <span key={`${e}-${index}`}>
+                {e}
+                <br></br>
+              </span>
+            ))}
+          />
+        </div>
       </div>
     </div>
   )

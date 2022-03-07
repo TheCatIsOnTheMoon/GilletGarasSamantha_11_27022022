@@ -1,11 +1,11 @@
 details {
-    color: var(--color-primary);
-    background-color: #f6f6f6;
-    margin: 20px 0 0 0;
+  color: var(--color-primary);
+  background-color: #f6f6f6;
+  margin: 20px 0 0 0;
 }
 
 summary {
-    display: flex;
+  display: flex;
   justify-content: space-between;
   padding: 6px 18px 6px 18px;
   color: var(--color-secondary);
@@ -15,7 +15,7 @@ summary {
 }
 
 details p {
-    padding: 30px 18px 20px 18px;
+  padding: 30px 18px 20px 18px;
   line-height: 142.6%;
 }
 
@@ -27,6 +27,6 @@ details p {
 }
 
 details[open]>summary img {
-    transform: rotate(0deg);
-    transition: 300ms ease-out;
+  transform: rotate(0deg);
+  transition: 300ms ease-out;
 }
