@@ -1,33 +1,10 @@
 import Card from '../Card/Card'
 import data from '../../data/data.json'
-import styled from 'styled-components'
+import './style.css'
 
-const CardList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 31.5%);
-
-  background: #f7f7f7;
-  border-radius: 25px;
-  gap: 30px;
-  padding: 20px;
-  margin 0 20px;
-
-  @media (max-width: 800px) {
-    display: grid;
-    grid-template-columns: repeat(2, 46.5%);
-  }
-
-  @media (max-width: 500px) {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: #ffff;
-  }
-`
 function CardContent() {
   return (
-    <CardList>
+    <div className="cards">
       {data.map((housing, index) => (
         <Card
           key={housing.id}
@@ -36,7 +13,7 @@ function CardContent() {
           picture={housing.cover}
         />
       ))}
-    </CardList>
+    </div>
   )
 }
 
