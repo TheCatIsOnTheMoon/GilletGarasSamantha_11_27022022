@@ -1,4 +1,4 @@
-import DetailsBar from '../components/DetailsBar'
+import DetailBar from '../DetailBar/DetailBar'
 
 const aboutContent = [
   {
@@ -22,12 +22,8 @@ const aboutContent = [
 function AboutContent() {
   return (
     <div>
-      {aboutContent.map((content) => (content, index) => (
-        <DetailsBar
-          key={`${content.title}-${index}`}
-          title={content.title}
-          text={content.text}
-        />
+      {aboutContent.map((e, index) => (
+        <DetailBar key={`${e.title}-${index}`} title={e.title} text={e.text} />
       ))}
     </div>
   )

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bannerphoto from '../assets/banner_about.png'
+import bannerphoto from './banner_about.png'
 
 const BannerImg = styled.img`
   height: 223px;

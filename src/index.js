@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './styles/reset.css'
 import './styles/index.css'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
-import Home from './pages/Home'
-import About from './pages/About'
-import Housing from './pages/Housing'
-import Error from './components/Error'
+import Home from './pages/Home/Home'
+import About from './pages/About/About'
+import Housing from './pages/Housing/Housing'
+import Error from './pages/Error/Error'
 
 import reportWebVitals from './reportWebVitals'
 

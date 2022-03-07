@@ -1,0 +1,27 @@
+details {
+    color: var(--color-primary);
+  background-color: #f6f6f6;
+  margin: 20px 0;
+}
+
+summary {
+    display: flex;
+  justify-content: space-between;
+  padding: 6px 18px 6px 18px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+details p {
+    padding: 30px 18px 20px 18px;
+  line-height: 142.6%;
+}
+
+/* details[open]>summary {} */
+
+details[open]>summary img {
+    transform: rotate(180deg);
+    transition: 300ms ease-out;
+}

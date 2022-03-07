@@ -1,5 +1,5 @@
-import Card from './Card'
-import data from '../data/data.json'
+import Card from '../Card/Card'
+import data from '../../data/data.json'
 import styled from 'styled-components'
 
 const CardList = styled.div`
@@ -25,12 +25,7 @@ const CardList = styled.div`
     background: #ffff;
   }
 `
-
-// display: flex;
-//   justify-content: space-between;
-//   flex-wrap: wrap;
-
-function HousingCards() {
+function CardContent() {
   return (
     <CardList>
       {data.map((housing, index) => (
@@ -45,4 +40,4 @@ function HousingCards() {
   )
 }
 
-export default HousingCards
+export default CardContent

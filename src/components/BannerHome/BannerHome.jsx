@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import bannerphoto from '../assets/banner_home.png'
+import bannerphoto from './banner_home.png'
 
 const BannerBox = styled.div`
   margin: 0 20px;

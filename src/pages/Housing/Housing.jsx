@@ -1,5 +1,5 @@
-import HousePage from '../components/HousePage'
-import data from '../data/data.json'
+import HousePage from '../../components/HousingContent/HousingContent'
+import data from '../../data/data.json'
 import { useLocation } from 'react-router-dom'
 
 function Housing() {
