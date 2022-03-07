@@ -1,7 +1,7 @@
 details {
     color: var(--color-primary);
-  background-color: #f6f6f6;
-  margin: 20px 0;
+    background-color: #f6f6f6;
+    margin: 20px 0 0 0;
 }
 
 summary {
