@@ -1,21 +1,19 @@
-import { useState } from 'react'
-import arrow from './arrow.svg'
-import './style.css'
-
-//https://frontendpablo.hashnode.dev/build-a-carouselslider-in-react-from-scratch
+import { useState } from 'react';
+import arrow from './arrow.svg';
+import './style.css';
 
 function Carousel({ pictures }) {
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
-  const length = pictures.length
+  const length = pictures.length;
 
   const next = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1)
-  }
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
   const prev = () => {
-    setCurrent(current === 0 ? length - 1 : current - 1)
-  }
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
   return (
     <div className="carousel">
@@ -30,8 +28,11 @@ function Carousel({ pictures }) {
                 className="carousel_picture_img"
               />
             )}
+            {index === current && (
+              <span className="carousel_text">{`${index + 1}/${length}`}</span>
+            )}
           </div>
-        )
+        );
       })}
 
       <img
@@ -40,14 +41,16 @@ function Carousel({ pictures }) {
         onClick={prev}
         className="carousel_arrow_before"
       />
+      <div onClick={prev} className="carousel_arrow_area_before"></div>
       <img
         src={arrow}
         alt="arrow after"
         onClick={next}
         className="carousel_arrow_after"
       />
+      <div onClick={next} className="carousel_arrow_area_after"></div>
     </div>
-  )
+  );
 }
 
-export default Carousel
+export default Carousel;
