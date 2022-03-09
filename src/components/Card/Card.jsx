@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import './style.css';
 
 function Card({ id, title, picture }) {
@@ -15,11 +14,5 @@ function Card({ id, title, picture }) {
     </div>
   );
 }
-
-Card.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  picture: PropTypes.string,
-};
 
 export default Card;
