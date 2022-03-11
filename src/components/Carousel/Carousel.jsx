@@ -7,13 +7,20 @@ function Carousel({ pictures }) {
 
   const length = pictures.length;
 
-  const next = () => {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-  };
+  function isVisible() {
+    if (pictures.length < 2) {
+      return false;
+    }
+    return true;
+  }
 
-  const prev = () => {
+  function next() {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  }
+
+  function prev() {
     setCurrent(current === 0 ? length - 1 : current - 1);
-  };
+  }
 
   return (
     <div className="carousel">
@@ -34,21 +41,28 @@ function Carousel({ pictures }) {
           </div>
         );
       })}
-
-      <img
-        src={arrow}
-        alt="arrow before"
-        onClick={prev}
-        className="carousel_arrow_before"
-      />
-      <div onClick={prev} className="carousel_arrow_area_before"></div>
-      <img
-        src={arrow}
-        alt="arrow after"
-        onClick={next}
-        className="carousel_arrow_after"
-      />
-      <div onClick={next} className="carousel_arrow_area_after"></div>
+      {isVisible() && (
+        <img
+          src={arrow}
+          alt="arrow before"
+          onClick={prev}
+          className="carousel_arrow_before"
+        />
+      )}
+      {isVisible() && (
+        <div onClick={prev} className="carousel_arrow_area_before"></div>
+      )}
+      {isVisible() && (
+        <img
+          src={arrow}
+          alt="arrow after"
+          onClick={next}
+          className="carousel_arrow_after"
+        />
+      )}
+      {isVisible() && (
+        <div onClick={next} className="carousel_arrow_area_after"></div>
+      )}
     </div>
   );
 }
