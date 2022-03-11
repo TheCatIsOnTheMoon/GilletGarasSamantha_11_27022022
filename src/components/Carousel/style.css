@@ -46,8 +46,6 @@
 }
 
 .carousel_text {
-  font-family: Montserrat;
-  font-style: normal;
   font-size: 18px;
   line-height: 142.6%;
   color: var(--color-secondary);
